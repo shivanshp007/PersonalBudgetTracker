@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add income/ Expenses</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Budget Tracker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Add_income_expense.html">Add Expense/Income</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sammary.html">View Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container mt-4">
+            <h1>Personal Budget Tracker</h1>
+            <p>Track your income and expenses, and visualize your spending habits.</p>
+        </div>
+    </header>
+    <main class="container mt-4">
+        <section>
+            <h2>Add New Income or Expense</h2>
+            <p>Use the form below to add a new income or expense to your budget. 
+                You can categorize your transactions, set the amount, and add a description to keep track of your spending habits.</p>
+            <form action="#" method="post" class="needs-validation" id="budget-form" novalidate>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" class="form-control" required>
+                        <option value="Food">Food</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Salary">Salary</option>
+                        <option value="Housing">Housing</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Utilities">Utilities</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type">
+                        <option value="Income">Income</option>
+                        <option value="Expense">Expense</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Entry</button>
+                <button type="reset" class="btn btn-secondary">Clear Form</button>
+            </form>
+        </section>
+        <section>
+            <h2>Budget Summary</h2>
+            <p>View your income and expenses, as well as visualize your spending habits.</p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="budget-table">
+                        <!-- Add transaction data here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class=" text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h6 class="text-uppercase">Budget Tracker</h6>
+                    <p>Version 1.0.0</p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h6 class="text-uppercase">Links</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#" class="text-dark">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-dark">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 ">
+            © 2023 Budget Tracker
+        </div>
+    </footer>
+    <script src="sammary.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
